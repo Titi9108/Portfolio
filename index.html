@@ -1,168 +1,233 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAJAB Tarek | Portfolio</title>
+    <title>Tarek RAJAB - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="nav">
-    <div class="logo"><span>RAJAB</span> Tarek</div>
-    <ul class="nav-links">
-        <li><a href="#hero">Accueil</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#experiences">Expériences</a></li>
-        <li><a href="#entreprise">Entreprise</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+    <!-- NAVBAR -->
+    <nav class="nav">
+        <div class="logo">RAJAB <span>Tarek</span></div>
 
+        <ul class="nav-links">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#experience">Expériences</a></li>
+            <li><a href="#entreprise">Entreprise</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- ================= HERO ================= -->
-<section id="hero" class="hero">
-    <div class="hero-inner">
-        <div class="hero-content">
-            <div>
-                <div class="hero-tag">BTS SIO SISR • Admin Systèmes & Réseaux junior</div>
-                <h1>Tarek RAJAB</h1>
-                <p class="hero-desc">
-                    Étudiant en BTS SIO SISR et actuellement en alternance chez Vermeg. 
-                    Passionné par l’infrastructure, la virtualisation, la sécurité et les environnements serveurs.
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="hero-inner">
+
+            <div class="hero-content">
+
+                <div>
+                    <p class="hero-tag">BTS SIO SISR • Admin Systèmes & Réseaux junior</p>
+
+                    <h1>Tarek RAJAB</h1>
+
+                    <p class="hero-desc">
+                        Étudiant en BTS SIO SISR et actuellement en alternance chez Vermeg.
+                        Passionné par l’infrastructure, la virtualisation, la sécurité et les environnements serveurs.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn primary">Voir mes projets</a>
+                        <a href="#contact" class="btn ghost">Me contacter</a>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="hero-pill">Profil rapide</div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Années IT</span>
+                        </div>
+
+                        <div class="stat">
+                            <span class="stat-number">2024–2026</span>
+                            <span class="stat-label">Alternance</span>
+                        </div>
+
+                        <div class="stat">
+                            <span class="stat-number">Infra • Sécu</span>
+                            <span class="stat-label">SysAdmin</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="section-header">
+            <h2>À propos</h2>
+            <p>Qui je suis et ce que je construis dans l'IT.</p>
+        </div>
+
+        <p>
+            Je construis peu à peu un profil d’administrateur systèmes & réseaux orienté Microsoft,
+            virtualisation, sécurité des S.I. et supervision. Mon objectif est de devenir un expert
+            capable d’assurer la performance, la fiabilité et la sécurité d’environnements critiques.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+        <div class="section-header">
+            <h2>Compétences</h2>
+        </div>
+
+        <div class="grid three-cols">
+            <div class="card">
+                <h3>Systèmes</h3>
+                <ul>
+                    <li>Windows Server</li>
+                    <li>Active Directory</li>
+                    <li>DNS / DHCP</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Outils IT</h3>
+                <ul>
+                    <li>Jira</li>
+                    <li>GLPI</li>
+                    <li>Linux Debian</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Réseaux</h3>
+                <ul>
+                    <li>Subnetting</li>
+                    <li>VLANs</li>
+                    <li>Firewalling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+        <div class="section-header">
+            <h2>Projets</h2>
+        </div>
+
+        <div class="grid three-cols">
+            <div class="card project-card">
+                <span class="badge">Windows Server</span>
+                <p>Installation complète avec services AD, DNS, DHCP et GPO.</p>
+            </div>
+
+            <div class="card project-card">
+                <span class="badge">Jira</span>
+                <p>Déploiement, configuration, workflow ITSM et gestion d’équipe.</p>
+            </div>
+
+            <div class="card project-card">
+                <span class="badge">Support IT</span>
+                <p>Résolution d’incidents, tickets, maintenance matérielle & logicielle.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+        <div class="section-header">
+            <h2>Expériences</h2>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2024–2026</span>
+                    <h3>Alternance – Vermeg</h3>
+                    <p>Support IT, administration système, supervision, déploiements.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ENTREPRISE -->
+    <section id="entreprise" class="section">
+        <div class="section-header">
+            <h2>Mon entreprise : Vermeg</h2>
+            <p>Présentation, historique et informations.</p>
+        </div>
+
+        <div class="grid two-cols">
+
+            <div class="card">
+                <h3>À propos de Vermeg</h3>
+                <p>
+                    Vermeg est une entreprise spécialisée dans les solutions financières, fondée en 2002.
+                    Elle propose des logiciels bancaires, assurances et gestion d’actifs.
                 </p>
 
-                <div class="hero-actions">
-                    <a href="#projets" class="btn primary">Voir mes projets</a>
-                    <a href="#contact" class="btn ghost">Me contacter</a>
-                </div>
+                <p><strong>Ce que je fais :</strong></p>
+                <ul>
+                    <li>Support IT niveau 1 & 2</li>
+                    <li>Gestion utilisateurs / Active Directory</li>
+                    <li>Maintenance du parc informatique</li>
+                    <li>Supervision & virtualisation</li>
+                </ul>
             </div>
 
-            <div class="hero-card">
-                <div class="hero-pill">Profil rapide</div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">2+</span>
-                        <span class="stat-label">Années IT</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">2024–2026</span>
-                        <span class="stat-label">Alternance</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">Infra • Secu</span>
-                        <span class="stat-label">SysAdmin</span>
-                    </div>
-                </div>
+            <div class="card">
+                <h3>Localisation</h3>
+
+                <iframe
+                    width="100%"
+                    height="250"
+                    style="border-radius: 10px; border: none;"
+                    loading="lazy"
+                    allowfullscreen
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999170271571!2d2.3601!3d48.8566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1cfce3eaf1%3A0x4a5bb7be!2sVermeg!5e0!3m2!1sfr!2sfr!4v1700000000000">
+                </iframe>
+
             </div>
+
         </div>
-    </div>
-</section>
+    </section>
 
-
-<!-- ================= A PROPOS ================= -->
-<section id="apropos" class="section">
-    <div class="section-header">
-        <h2>À propos</h2>
-    </div>
-
-    <div class="card">
-        <p>
-            Je construis progressivement un profil d’administrateur systèmes & réseaux, orienté 
-            infrastructure Microsoft, virtualisation et sécurité des systèmes d’information.
-        </p>
-    </div>
-</section>
-
-
-<!-- ================= COMPETENCES ================= -->
-<section id="competences" class="section">
-    <div class="section-header">
-        <h2>Compétences</h2>
-    </div>
-
-    <div class="grid three-cols skills-grid">
-        <div class="card"><h3>Virtualisation</h3><ul><li>VMware ESXi</li><li>Hyper-V</li></ul></div>
-        <div class="card"><h3>Windows Server</h3><ul><li>AD DS</li><li>GPO</li><li>DNS/DHCP</li></ul></div>
-        <div class="card"><h3>Réseaux</h3><ul><li>TCP/IP</li><li>VLAN</li><li>Firewall</li></ul></div>
-    </div>
-</section>
-
-
-<!-- ================= PROJETS ================= -->
-<section id="projets" class="section">
-    <div class="section-header">
-        <h2>Projets</h2>
-    </div>
-
-    <div class="grid three-cols">
-        <div class="card project-card">
-            <span class="badge">Systèmes</span>
-            <h3>Windows Server</h3>
-            <p>Installation AD, GPO, DNS, DHCP pour un réseau complet.</p>
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <div class="section-header">
+            <h2>Contact</h2>
         </div>
 
-        <div class="card project-card">
-            <span class="badge">Déploiement</span>
-            <h3>Jira Software</h3>
-            <p>Installation et configuration sous Linux + base PostgreSQL.</p>
+        <div class="contact-card card">
+            <p>Vous pouvez me contacter ici :</p>
+            <a class="contact-email" href="mailto:tarekrajabpro@gmail.com">
+                tarekrajabpro@gmail.com
+            </a>
         </div>
-    </div>
-</section>
+    </section>
 
-
-<!-- ================= ENTREPRISE ================= -->
-<section id="entreprise" class="section">
-    <div class="section-header">
-        <h2>Entreprise – Vermeg</h2>
-        <p>Présentation de mon entreprise d’alternance</p>
-    </div>
-
-    <div class="card">
-        <img src="https://www.vermeg.com/wp-content/uploads/2021/05/logo-vermeg-white.png" 
-             alt="Logo Vermeg" style="max-width:180px;margin-bottom:15px;">
-
-        <p><strong>Nom :</strong> Vermeg</p>
-        <p><strong>Création :</strong> 1993</p>
-        <p><strong>Fondateur :</strong> Badreddine Ouali</p>
-        <p><strong>Secteur :</strong> Logiciels financiers & assurance</p>
-        <p><strong>Ce que je fais :</strong> Administration systèmes, support infra, virtualisation et sécurité.</p>
-
-        <br>
-        <h3>📍 Adresse</h3>
-        <p>Vermeg France – 52 Rue d’Anjou, 75008 Paris</p>
-
-        <!-- Carte Google Maps -->
-        <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.31100939163!2d2.319877!3d48.873543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e28d393ca5b%3A0x8917d4291e90b9fc!2s52%20Rue%20d'Anjou%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1700000000000"
-        width="100%" height="300" style="border-radius:12px;border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section">
-    <div class="section-header">
-        <h2>Contact</h2>
-    </div>
-
-    <div class="contact-card">
-        <p>Pour toute demande de contact :</p>
-        <a href="mailto:tarekrajabpro@gmail.com" class="contact-email">
-            tarekrajabpro@gmail.com
-        </a>
-    </div>
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-    © 2025 – Tarek RAJAB. Tous droits réservés.
-</footer>
+    <footer class="footer">
+        © 2025 – Tarek RAJAB. Tous droits réservés.
+    </footer>
 
 </body>
+
 </html>
