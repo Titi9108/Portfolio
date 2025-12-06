@@ -9,39 +9,31 @@
 
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- ================= NAVBAR ================= -->
 <nav class="nav">
-    <div class="logo">RAJAB <span>Tarek</span></div>
+    <div class="logo"><span>RAJAB</span> Tarek</div>
     <ul class="nav-links">
         <li><a href="#hero">Accueil</a></li>
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#competences">Compétences</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#experiences">Expériences</a></li>
-        <li><a href="entreprise.html">Entreprise</a></li>
+        <li><a href="#entreprise">Entreprise</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
-<section class="hero" id="hero">
+<!-- ================= HERO ================= -->
+<section id="hero" class="hero">
     <div class="hero-inner">
-
         <div class="hero-content">
             <div>
                 <div class="hero-tag">BTS SIO SISR • Admin Systèmes & Réseaux junior</div>
-
                 <h1>Tarek RAJAB</h1>
-
                 <p class="hero-desc">
-                    Étudiant en BTS SIO SISR et actuellement en alternance chez Vermeg.
+                    Étudiant en BTS SIO SISR et actuellement en alternance chez Vermeg. 
                     Passionné par l’infrastructure, la virtualisation, la sécurité et les environnements serveurs.
-                    Ce portfolio présente mon parcours, mes compétences et mes projets.
                 </p>
 
                 <div class="hero-actions">
@@ -50,21 +42,17 @@
                 </div>
             </div>
 
-            <!-- Carte profil rapide -->
             <div class="hero-card">
                 <div class="hero-pill">Profil rapide</div>
-
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-number">2+</span>
                         <span class="stat-label">Années IT</span>
                     </div>
-
                     <div class="stat">
                         <span class="stat-number">2024–2026</span>
                         <span class="stat-label">Alternance</span>
                     </div>
-
                     <div class="stat">
                         <span class="stat-number">Infra • Secu</span>
                         <span class="stat-label">SysAdmin</span>
@@ -72,163 +60,106 @@
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 
 
-<!-- =========================
-     À PROPOS
-========================= -->
-<section class="section" id="apropos">
+<!-- ================= A PROPOS ================= -->
+<section id="apropos" class="section">
     <div class="section-header">
         <h2>À propos</h2>
-        <p>Qui je suis, mon parcours et mes objectifs professionnels.</p>
     </div>
 
-    <p>
-        Je construis progressivement un profil d’administrateur systèmes & réseaux orienté infrastructure Microsoft,
-        virtualisation et sécurité des environnements informatiques. Mon objectif est de devenir un professionnel
-        polyvalent capable d'intervenir sur des architectures complexes.
-    </p>
-
-    <div class="about-highlights" style="margin-top:20px;">
-        <span class="pill">BTS SIO SISR</span>
-        <span class="pill">Alternance Vermeg</span>
-        <span class="pill">Infra</span>
-        <span class="pill">Sécurité</span>
+    <div class="card">
+        <p>
+            Je construis progressivement un profil d’administrateur systèmes & réseaux, orienté 
+            infrastructure Microsoft, virtualisation et sécurité des systèmes d’information.
+        </p>
     </div>
 </section>
 
 
-<!-- =========================
-     COMPÉTENCES
-========================= -->
-<section class="section" id="competences">
+<!-- ================= COMPETENCES ================= -->
+<section id="competences" class="section">
     <div class="section-header">
         <h2>Compétences</h2>
-        <p>Ce que je maîtrise et les technologies que j’utilise.</p>
     </div>
 
     <div class="grid three-cols skills-grid">
-        <div class="card">
-            <h3>Réseaux</h3>
-            <ul>
-                <li>VLAN, DHCP, DNS</li>
-                <li>Configuration routeurs / switches</li>
-                <li>Modèle OSI</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h3>Systèmes</h3>
-            <ul>
-                <li>Windows Server</li>
-                <li>Active Directory / GPO</li>
-                <li>Linux (Ubuntu)</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h3>Outils & Sécurité</h3>
-            <ul>
-                <li>Jira</li>
-                <li>VMware / Virtualisation</li>
-                <li>Supervision & sauvegardes</li>
-            </ul>
-        </div>
+        <div class="card"><h3>Virtualisation</h3><ul><li>VMware ESXi</li><li>Hyper-V</li></ul></div>
+        <div class="card"><h3>Windows Server</h3><ul><li>AD DS</li><li>GPO</li><li>DNS/DHCP</li></ul></div>
+        <div class="card"><h3>Réseaux</h3><ul><li>TCP/IP</li><li>VLAN</li><li>Firewall</li></ul></div>
     </div>
 </section>
 
 
-<!-- =========================
-     PROJETS
-========================= -->
-<section class="section" id="projets">
+<!-- ================= PROJETS ================= -->
+<section id="projets" class="section">
     <div class="section-header">
         <h2>Projets</h2>
-        <p>Quelques projets techniques réalisés.</p>
     </div>
 
     <div class="grid three-cols">
         <div class="card project-card">
-            <span class="badge">Windows Server</span>
-            <h3>Active Directory complet</h3>
-            <p>Installation et configuration d’un domaine, GPO, utilisateurs, services réseau.</p>
-            <p class="tech">AD DS • DNS • DHCP</p>
+            <span class="badge">Systèmes</span>
+            <h3>Windows Server</h3>
+            <p>Installation AD, GPO, DNS, DHCP pour un réseau complet.</p>
         </div>
 
         <div class="card project-card">
-            <span class="badge">Linux / Réseau</span>
-            <h3>Serveur Ubuntu + services</h3>
-            <p>Mise en place d’un serveur Linux avec services réseau, automatisations et scripts.</p>
-            <p class="tech">Ubuntu • SSH • Cron</p>
-        </div>
-
-        <div class="card project-card">
-            <span class="badge">Outils</span>
-            <h3>Projet Jira</h3>
-            <p>Installation complète d’un serveur Jira Software sous Linux pour gestion de projets.</p>
-            <p class="tech">Jira • Linux • PostgreSQL</p>
+            <span class="badge">Déploiement</span>
+            <h3>Jira Software</h3>
+            <p>Installation et configuration sous Linux + base PostgreSQL.</p>
         </div>
     </div>
 </section>
 
 
-<!-- =========================
-     EXPÉRIENCES
-========================= -->
-<section class="section" id="experiences">
+<!-- ================= ENTREPRISE ================= -->
+<section id="entreprise" class="section">
     <div class="section-header">
-        <h2>Expériences</h2>
-        <p>Mon parcours professionnel.</p>
+        <h2>Entreprise – Vermeg</h2>
+        <p>Présentation de mon entreprise d’alternance</p>
     </div>
 
-    <div class="timeline">
+    <div class="card">
+        <img src="https://www.vermeg.com/wp-content/uploads/2021/05/logo-vermeg-white.png" 
+             alt="Logo Vermeg" style="max-width:180px;margin-bottom:15px;">
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <div class="timeline-date">2024 – 2026</div>
-                <h3>Alternant Administrateur Systèmes & Réseaux – Vermeg</h3>
-                <p>Participation à la gestion de l’infrastructure, support, supervision et projets internes.</p>
-            </div>
-        </div>
+        <p><strong>Nom :</strong> Vermeg</p>
+        <p><strong>Création :</strong> 1993</p>
+        <p><strong>Fondateur :</strong> Badreddine Ouali</p>
+        <p><strong>Secteur :</strong> Logiciels financiers & assurance</p>
+        <p><strong>Ce que je fais :</strong> Administration systèmes, support infra, virtualisation et sécurité.</p>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <div class="timeline-date">2023 – 2024</div>
-                <h3>Bac Pro SN RISC</h3>
-                <p>Diplôme obtenu avec spécialisation en réseaux et systèmes communicants.</p>
-            </div>
-        </div>
+        <br>
+        <h3>📍 Adresse</h3>
+        <p>Vermeg France – 52 Rue d’Anjou, 75008 Paris</p>
 
+        <!-- Carte Google Maps -->
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.31100939163!2d2.319877!3d48.873543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e28d393ca5b%3A0x8917d4291e90b9fc!2s52%20Rue%20d'Anjou%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1700000000000"
+        width="100%" height="300" style="border-radius:12px;border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
-<section class="section" id="contact">
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section">
     <div class="section-header">
         <h2>Contact</h2>
-        <p>Vous pouvez me joindre ici.</p>
     </div>
 
     <div class="contact-card">
-        <p>Envie d’échanger ou de collaborer ?</p>
-        <a class="contact-email" href="mailto:tarekrajabpro@gmail.com">
+        <p>Pour toute demande de contact :</p>
+        <a href="mailto:tarekrajabpro@gmail.com" class="contact-email">
             tarekrajabpro@gmail.com
         </a>
     </div>
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
     © 2025 – Tarek RAJAB. Tous droits réservés.
 </footer>
