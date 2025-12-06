@@ -1,147 +1,73 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio – Tarek RAJAB</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+/* ---------------------------------------
+   NAVBAR FIX – VERSION NETLIFY
+---------------------------------------- */
 
-<body>
+.navbar {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(10, 15, 40, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 900;
+}
 
-  <nav class="navbar">
-    <ul>
-        <li><a href="#hero">Accueil</a></li>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#skills">Compétences</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#experience">Expériences</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
 
+.navbar ul li a {
+    text-decoration: none;
+    color: #dbeafe;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
 
-    <!-- HERO -->
-    <section id="hero" class="hero">
-        <div class="hero-inner">
-            <div class="hero-content">
-                <div>
-                    <div class="hero-tag">BTS SIO SISR – Admin Systèmes & Réseaux junior</div>
-                    <h1>Tarek RAJAB</h1>
-                    <p class="hero-desc">
-                        Étudiant en BTS SIO SISR et actuellement en alternance chez Vermeg. Passionné par 
-                        l’infrastructure, la virtualisation, la sécurité et les environnements serveurs.
-                        Ce portfolio présente mon parcours, mes compétences et mes projets.
-                    </p>
+.navbar ul li a:hover {
+    color: #818cf8;
+}
 
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn primary">Voir mes projets</a>
-                        <a href="#contact" class="btn ghost">Me contacter</a>
-                    </div>
-                </div>
+/* ---------------------------------------
+   HERO FIX – ALIGNEMENT
+---------------------------------------- */
 
-                <!-- CARTE DE DROITE -->
-                <div class="hero-card">
-                    <div class="hero-pill">Profil rapide</div>
+.hero {
+    margin-top: 120px;
+}
 
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">2+</span>
-                            <span class="stat-label">Années IT</span>
-                        </div>
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #818cf8, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
-                        <div class="stat">
-                            <span class="stat-number">2024–2026</span>
-                            <span class="stat-label">Alternance</span>
-                        </div>
+.hero-desc {
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #d1d5db;
+}
 
-                        <div class="stat">
-                            <span class="stat-number">Infra • Secu</span>
-                            <span class="stat-label">SysAdmin</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+/* ---------------------------------------
+   BOUTONS FIX – VERSION NETLIFY
+---------------------------------------- */
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-        <div class="section-header">
-            <h2>À propos</h2>
-            <p>Un aperçu rapide de mon parcours et mes objectifs professionnels.</p>
-        </div>
+.btn.primary {
+    background: linear-gradient(90deg, #818cf8, #ec4899);
+    color: white;
+    padding: 12px 26px;
+    border-radius: 999px;
+    font-size: 1rem;
+}
 
-        <div class="card">
-            <p>
-                Actuellement étudiant en BTS SIO SISR, je me spécialise dans l’administration systèmes, 
-                réseaux, virtualisation et sécurité. Je développe également des compétences dans les 
-                environnements Linux, Windows Server et cloud.
-            </p>
-        </div>
-    </section>
-
-    <!-- COMPÉTENCES -->
-    <section id="skills" class="section">
-        <div class="section-header">
-            <h2>Compétences</h2>
-            <p>Technos, outils & domaines que je maîtrise.</p>
-        </div>
-
-        <div class="grid three-cols skills-grid">
-            <div class="card"><h3>Systèmes</h3><p>Linux, Windows Server, Active Directory</p></div>
-            <div class="card"><h3>Réseaux</h3><p>TCP/IP, VLAN, DHCP, DNS, Sécurité</p></div>
-            <div class="card"><h3>Outils</h3><p>VMware, Proxmox, Docker, GitHub</p></div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-        <div class="section-header">
-            <h2>Projets</h2>
-            <p>Quelques réalisations techniques et pratiques.</p>
-        </div>
-
-        <div class="grid three-cols">
-            <div class="card"><h3>Projet 1</h3><p>Déploiement AD + GPO + DNS</p></div>
-            <div class="card"><h3>Projet 2</h3><p>Infrastructure virtuelle sous Proxmox</p></div>
-            <div class="card"><h3>Projet 3</h3><p>Containerisation avec Docker</p></div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-        <div class="section-header">
-            <h2>Expériences</h2>
-        </div>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Administrateur systèmes & réseaux (Alternance)</h3>
-                    <p>Vermeg – 2024 à aujourd’hui</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-        <div class="section-header">
-            <h2>Contact</h2>
-        </div>
-
-        <div class="contact-card">
-            <p>Une question, un projet, une opportunité ?</p>
-            <a href="mailto:tarekrajabpro@gmail.com" class="contact-email">tarekrajabpro@gmail.com</a>
-        </div>
-    </section>
-
-    <footer class="footer">
-        © 2025 – Tarek RAJAB. Tous droits réservés.
-    </footer>
-
-</body>
-</html>
-
+.btn.primary:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
