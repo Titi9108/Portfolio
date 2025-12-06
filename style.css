@@ -1,20 +1,21 @@
 /* =========================
-   Variables & base
+   Variables
    ========================= */
 :root {
     --bg: #020617;
-    --bg-elevated: #020617cc;
-    --bg-card: #020617f2;
     --text: #e5e7eb;
-    --muted: #9ca3af;
-    --accent1: #6366f1;
-    --accent2: #ec4899;
-    --accent-soft: rgba(99, 102, 241, 0.2);
-    --border-subtle: rgba(148, 163, 184, 0.35);
-    --radius-lg: 18px;
-    --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.7);
+    --muted: #94a3b8;
+    --accent1: #6d5dfc;
+    --accent2: #e64996;
+    --card: rgba(15, 23, 42, 0.7);
+    --border: rgba(148, 163, 184, 0.35);
+    --radius: 18px;
+    --shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* =========================
+   RESET
+   ========================= */
 * {
     margin: 0;
     padding: 0;
@@ -26,296 +27,277 @@ html {
 }
 
 body {
-    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: radial-gradient(circle at top left, #111827, #020617 45%, #000 100%);
+    font-family: "Inter", sans-serif;
+    background: radial-gradient(circle at top left, #0f172a, #020617 60%, #000);
     color: var(--text);
-    line-height: 1.6;
-    min-height: 100vh;
     overflow-x: hidden;
-    position: relative;
-}
-
-/* Fond animé */
-body::before,
-body::after {
-    content: "";
-    position: fixed;
-    width: 420px;
-    height: 420px;
-    border-radius: 999px;
-    filter: blur(70px);
-    opacity: 0.45;
-    z-index: -2;
-    pointer-events: none;
-}
-
-body::before {
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.9), transparent 65%);
-    top: -120px;
-    left: -120px;
-    animation: float1 16s ease-in-out infinite alternate;
-}
-
-body::after {
-    background: radial-gradient(circle, rgba(236, 72, 153, 0.9), transparent 65%);
-    bottom: -160px;
-    right: -100px;
-    animation: float2 20s ease-in-out infinite alternate;
-}
-
-@keyframes float1 {
-    0% { transform: translate3d(0,0,0); }
-    100% { transform: translate3d(40px, 50px, 0); }
-}
-
-@keyframes float2 {
-    0% { transform: translate3d(0,0,0); }
-    100% { transform: translate3d(-60px, -40px, 0); }
 }
 
 /* =========================
-   NAVBAR FIX – VERSION GITHUB
+   NAVBAR
    ========================= */
-.navbar {
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.navbar ul li a {
-    color: #dbeafe;
-    font-size: 1.1rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: 0.2s ease;
-}
-
-.navbar ul li a:hover {
-    color: #818cf8;
-}
-
-/* =========================
-   Hero section
-   ========================= */
-.hero {
-    margin-top: 120px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    background: linear-gradient(90deg, #818cf8, #ec4899);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.hero-desc {
-    max-width: 700px;
-    font-size: 1.1rem;
-    color: #d1d5db;
-}
-
-/* Buttons */
-.btn.primary {
-    background: linear-gradient(90deg, #818cf8, #ec4899);
-    color: white;
-    padding: 12px 26px;
-    border-radius: 999px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.btn.primary:hover {
-    opacity: 0.85;
-    transform: translateY(-2px);
-}
-
-/* =========================
-   Cards / Profil rapide
-   ========================= */
-.card {
-    background: rgba(15, 23, 42, 0.9);
-    border: 1px solid rgba(148, 163, 184, 0.4);
-    padding: 20px;
-    border-radius: 18px;
-    backdrop-filter: blur(16px);
-    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.7);
-}
-
-.card h3 {
-    margin-bottom: 6px;
-}
-
-.stat-number {
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-.stat-label {
-    font-size: .9rem;
-    color: var(--muted);
-}
-
-/* =========================
-   Footer
-   ========================= */
-.footer {
-    text-align: center;
-    padding: 26px 16px 36px;
-    font-size: 0.8rem;
-    color: var(--muted);
-}
-/* NAVBAR FIX – VERSION FINALE */
 .nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: 18px 0;
-    z-index: 9999;
-    background: rgba(10, 15, 40, 0.75);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+    padding: 16px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(2, 6, 23, 0.65);
+    backdrop-filter: blur(14px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
 }
 
-.nav .logo {
+.logo {
     font-size: 1.3rem;
     font-weight: 700;
 }
 
-.nav .logo span {
-    color: #818cf8;
+.logo span {
+    color: var(--accent1);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 26px;
+    gap: 25px;
 }
 
 .nav-links a {
-    color: #dbeafe;
+    color: var(--text);
     text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.9;
+    position: relative;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Fix GitHub Pages spacing */
+body {
+    padding-top: 90px;
+}
+
+/* =========================
+   HERO
+   ========================= */
+.hero {
+    padding: 60px 20px 120px;
+}
+
+.hero-inner {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    gap: 40px;
+}
+
+.hero-tag {
+    color: var(--accent1);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.hero-desc {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 550px;
+}
+.hero-actions {
+    margin-top: 22px;
+    display: flex;
+    gap: 16px;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.btn {
+    padding: 12px 26px;
+    border-radius: 999px;
     font-size: 1rem;
     font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.nav-links a:hover,
-.nav-links .active {
-    color: #818cf8;
-}
-/* NAVBAR FIX – VERSION GITHUB */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 18px 0;
-    z-index: 999;
-    background: rgba(10, 15, 40, 0.7);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(148,163,184,0.3);
-}
-
-.nav-container {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 26px;
-}
-
-.nav-links a {
-    color: #dbeafe;
     text-decoration: none;
-    font-size: 1rem;
-}
-
-.nav-links a:hover,
-.nav-links .active {
-    color: #818cf8;
-}
-
-
-/* =========================
-   FIX NAVBAR (toujours visible en haut)
-   ========================= */
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-
-    padding: 18px 40px;
-
-    background: rgba(10, 15, 40, 0.82);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
-    backdrop-filter: blur(14px);
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-body {
-    padding-top: 90px; /* évite que la navbar soit collée sur le texte */
+.btn.primary {
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    color: white;
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5);
 }
 
-/* ===== FIX NAVBAR (VERSION GITHUB PAGES) ===== */
-.nav {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    padding: 18px 25px;
-    backdrop-filter: blur(16px);
-    background: rgba(10, 15, 30, 0.65);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+.btn.primary:hover {
+    transform: translateY(-3px);
 }
 
-body {
-    padding-top: 110px !important; /* espace pour éviter que la navbar cache le texte */
+.btn.ghost {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+}
+.btn.ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* =========================
-   FIX NAVBAR (toujours visible en haut)
+   HERO CARD
    ========================= */
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 18px 40px;
-
-    background: rgba(10, 15, 40, 0.82);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
-    backdrop-filter: blur(14px);
+.hero-card {
+    background: rgba(15, 23, 42, 0.85);
+    padding: 25px;
+    border-radius: 22px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
 }
 
-body {
-    padding-top: 90px; /* évite que la navbar soit collée sur le texte */
+.hero-pill {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
 }
 
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.stat {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.stat-number {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+.section {
+    padding: 80px 20px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+}
+
+.section-header p {
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+/* =========================
+   CARDS
+   ========================= */
+.card {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid var(--border);
+    padding: 22px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* =========================
+   GRID
+   ========================= */
+.grid {
+    display: grid;
+    gap: 22px;
+}
+.three-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 900px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+    .three-cols {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   PROJECTS
+   ========================= */
+.project-card .badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+.contact-card {
+    text-align: center;
+}
+
+.contact-email {
+    color: var(--accent1);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--muted);
+}
