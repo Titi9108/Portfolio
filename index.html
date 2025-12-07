@@ -3,111 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio – Tarek RAJAB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="logo">Tarek <span>RAJAB</span></div>
-  <ul>
-    <li><a href="#hero">Accueil</a></li>
-    <li><a href="#about">À propos</a></li>
-    <li><a href="#skills">Compétences</a></li>
-    <li><a href="#projects">Projets</a></li>
-    <li><a href="#experience">Expériences</a></li>
-    <li><a href="#company">Entreprise</a></li>
-    <li><a href="#certifs">Certifications</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
+<!-- BULLES -->
 <div class="bubbles">
   <span></span><span></span><span></span><span></span><span></span>
 </div>
 
-<section class="hero section" id="hero">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Tarek <span>RAJAB</span></div>
+  <ul>
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#experiences">Expériences</a></li>
+    <li><a href="#entreprise">Entreprise</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="accueil" class="hero">
   <h1>Tarek RAJAB</h1>
   <p>BTS SIO SISR – Admin Systèmes & Réseaux</p>
-  <div class="buttons">
-    <a href="#projects" class="btn">Voir mes projets</a>
-    <a href="#contact" class="btn ghost">Me contacter</a>
+  <div class="hero-btns">
+    <a href="#projets" class="btn">Voir mes projets</a>
+    <a href="#contact" class="btn outline">Me contacter</a>
   </div>
 </section>
 
-<section id="about" class="section">
+<!-- A PROPOS -->
+<section id="apropos">
   <h2>À propos</h2>
-  <p>Étudiant en BTS SIO option SISR, passionné par l’infrastructure, les systèmes, les réseaux et la cybersécurité.</p>
+  <p>Étudiant en BTS SIO option SISR, passionné par l’infrastructure, la virtualisation, la cybersécurité et les réseaux. Actuellement en alternance chez Vermeg.</p>
 </section>
 
-<section id="skills" class="section">
+<!-- COMPETENCES -->
+<section id="competences">
   <h2>Compétences</h2>
-  <div class="cards">
-    <a class="card" href="https://fr.wikipedia.org/wiki/Windows_Server" target="_blank">Windows Server</a>
-    <a class="card" href="https://fr.wikipedia.org/wiki/Active_Directory" target="_blank">Active Directory</a>
-    <a class="card" href="https://fr.wikipedia.org/wiki/Groupe_de_stratégie" target="_blank">GPO</a>
-    <a class="card" href="https://fr.wikipedia.org/wiki/Linux" target="_blank">Linux</a>
-    <a class="card" href="https://fr.wikipedia.org/wiki/Jira" target="_blank">Jira</a>
-    <a class="card" href="https://fr.wikipedia.org/wiki/Cybersécurité" target="_blank">Cybersécurité</a>
+  <div class="grid">
+    <a href="https://fr.wikipedia.org/wiki/Windows_Server" target="_blank">Windows Server</a>
+    <a href="https://fr.wikipedia.org/wiki/Active_Directory" target="_blank">Active Directory</a>
+    <a href="https://fr.wikipedia.org/wiki/Groupe_de_strat%C3%A9gie" target="_blank">GPO</a>
+    <a href="https://fr.wikipedia.org/wiki/Linux" target="_blank">Linux</a>
+    <a href="https://fr.wikipedia.org/wiki/Jira" target="_blank">Jira</a>
+    <a href="https://fr.wikipedia.org/wiki/S%C3%A9curit%C3%A9_informatique" target="_blank">Cybersécurité</a>
   </div>
 </section>
 
-<section id="projects" class="section">
+<!-- PROJETS -->
+<section id="projets">
   <h2>Projets</h2>
-  <div class="cards">
-    <a class="card" href="https://fr.wikipedia.org/wiki/Windows_Server" target="_blank">Projet Windows Server</a>
-    <a class="card" href="https://fr.wikipedia.org/wiki/Jira" target="_blank">Projet Jira</a>
+  <div class="grid">
+    <div class="card">
+      <h3>Windows Server</h3>
+      <p>Installation AD, GPO, OU, utilisateurs, DNS.</p>
+    </div>
+    <div class="card">
+      <h3>Jira</h3>
+      <p>Installation, tickets, workflows, automatisations.</p>
+    </div>
   </div>
 </section>
 
-<section id="experience" class="section">
+<!-- EXPERIENCES -->
+<section id="experiences">
   <h2>Expériences</h2>
   <div class="card">
-    <b>2024 – Stage Développeur (1 mois)</b><br>
-    Création d’outils internes, scripts d’automatisation, développement web interne, participation aux réunions projets.
+    <h3>Alternance – Vermeg (2024-2026)</h3>
+    <p>Support IT, AD, tickets, supervision, virtualisation.</p>
   </div>
   <div class="card">
-    <b>2024–2026 – Alternance Admin Systèmes & Réseaux</b><br>
-    Support IT, Active Directory, tickets, supervision, gestion serveurs.
+    <h3>Stage Développeur – Vermeg (2024)</h3>
+    <p>Développement d’outils internes, automatisation scripts, documentation.</p>
   </div>
 </section>
 
-<section id="company" class="section">
-  <h2>Entreprise – Vermeg</h2>
-  <p>Vermeg est une entreprise internationale fondée en 2002, spécialisée dans les solutions logicielles pour les banques, assurances et la finance.</p>
-  <iframe src="https://www.google.com/maps?q=vermeg+france&output=embed"></iframe>
+<!-- ENTREPRISE -->
+<section id="entreprise">
+  <h2>Entreprise : Vermeg</h2>
+  <p>Vermeg est une entreprise internationale créée en 2002, spécialisée dans les solutions logicielles financières, bancaires et de gestion d’actifs. Présente dans plus de 10 pays.</p>
+
+  <iframe src="https://www.google.com/maps?q=Vermeg+France&output=embed"></iframe>
 </section>
 
-<section id="certifs" class="section">
+<!-- CERTIFICATIONS -->
+<section id="certifications">
   <h2>Certifications</h2>
-  <div class="cards">
+  <div class="grid">
     <div class="card">CNIL 1</div>
     <div class="card">CNIL 2</div>
-    <div class="card">Sécurité Numérique</div>
-    <div class="card">Informatique & Réseaux</div>
+    <div class="card">Certification 3</div>
+    <div class="card">Certification 4</div>
   </div>
 </section>
 
-<section id="contact" class="section">
+<!-- CONTACT -->
+<section id="contact">
   <h2>Contact</h2>
-  <form class="contact-form">
+  <form>
     <input type="text" placeholder="Nom">
     <input type="email" placeholder="Email">
     <textarea placeholder="Message"></textarea>
     <button>Envoyer</button>
   </form>
 </section>
-
-<script>
-const items = document.querySelectorAll('.section, .card');
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if(e.isIntersecting){
-      e.target.classList.add('show');
-    }
-  });
-},{threshold:0.2});
-items.forEach(i => obs.observe(i));
-</script>
 
 </body>
 </html>
