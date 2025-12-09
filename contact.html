@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Tarek RAJAB</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Contact – Tarek RAJAB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <h1>Tarek RAJAB</h1>
-</header>
-<nav>
+
+<header class="navbar">
+  <div class="logo">Tarek <span>RAJAB</span></div>
+  <nav>
     <a href="index.html">Accueil</a>
-    <a href="about.html">À propos</a>
+    <a href="apropos.html">À propos</a>
     <a href="experiences.html">Expériences</a>
-    <a href="projects.html">Projets</a>
-    <a href="skills.html">Compétences</a>
-    <a href="contact.html">Contact</a>
-</nav>
-<section>
-    <h2>Contact</h2>
-    <p>Email : <a href="mailto:tarekrajabpro@gmail.com">tarekrajabpro@gmail.com</a></p>
+    <a href="projets.html">Projets</a>
+    <a href="competences.html">Compétences</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <h1>Me contacter</h1>
+
+  <div class="contact-card">
+    <p><strong>Email :</strong> tarekrajabpro@gmail.com</p>
+
+    <a href="cv-tarek-rajab.pdf" download class="btn">
+      📄 Télécharger mon CV
+    </a>
+  </div>
+
+  <form class="contact-form">
+    <input type="text" placeholder="Ton nom" required>
+    <input type="email" placeholder="Ton email" required>
+    <textarea placeholder="Ton message" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+
 </section>
+
 <footer>
-    &copy; 2025 Tarek RAJAB
+  © 2025 Tarek RAJAB
 </footer>
+
 </body>
 </html>
