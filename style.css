@@ -5,26 +5,30 @@
   font-family: Arial, sans-serif;
 }
 
+/* ===== BASE ===== */
 body {
   background: radial-gradient(circle at 20% 20%, #2b0b5e, #050010 70%),
               radial-gradient(circle at 80% 80%, #ff2fb3, #050010 70%);
   color: white;
+  overflow-x: hidden;
 }
 
+/* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
   width: 100%;
   top: 0;
-  padding: 20px 8%;
-  background: rgba(0,0,0,0.8);
+  padding: 15px 6%;
+  background: rgba(0,0,0,0.85);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  flex-wrap: wrap;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -32,45 +36,64 @@ body {
   color: #ff2fb3;
 }
 
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
 nav a {
-  margin-left: 20px;
   color: white;
   text-decoration: none;
+  font-size: 14px;
 }
 
 nav a:hover {
   color: #ff2fb3;
 }
 
+/* ===== HERO ===== */
 .hero {
   min-height: 100vh;
-  padding: 140px 10%;
+  padding: 140px 6% 60px;
   position: relative;
+  text-align: center;
 }
 
 .hero h1 {
-  font-size: 60px;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 .hero h2 {
-  margin-top: 10px;
+  font-size: 18px;
   font-weight: normal;
 }
 
 .hero p {
   margin-top: 15px;
-  max-width: 600px;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .hero-buttons {
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 
 .btn-main, .btn-outline {
-  padding: 14px 28px;
+  padding: 14px 26px;
   border-radius: 30px;
   text-decoration: none;
-  margin-right: 15px;
+  width: 100%;
+  max-width: 260px;
+  text-align: center;
 }
 
 .btn-main {
@@ -83,32 +106,43 @@ nav a:hover {
   color: white;
 }
 
+/* ===== STATS ===== */
 .stats {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 20px;
   margin-top: 40px;
+  align-items: center;
 }
 
+.stats div {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ===== SECTIONS ===== */
 .section {
-  padding: 120px 10%;
+  padding: 90px 6%;
+  text-align: center;
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 32px;
   color: #ff2fb3;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
+/* ===== GRILLES ===== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .grid a, .card {
-  background: rgba(255,255,255,0.07);
-  padding: 25px;
-  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  padding: 22px;
+  border-radius: 18px;
   text-align: center;
   text-decoration: none;
   color: white;
@@ -117,17 +151,19 @@ h2 {
 
 .grid a:hover, .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px #ff2fb3;
+  box-shadow: 0 0 20px #ff2fb3;
 }
 
+/* ===== FORMULAIRE ===== */
 form {
-  max-width: 400px;
+  max-width: 100%;
+  margin: auto;
 }
 
 input, textarea {
   width: 100%;
   padding: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   border-radius: 10px;
   border: none;
 }
@@ -138,35 +174,62 @@ button {
   border: none;
   border-radius: 20px;
   color: white;
+  width: 100%;
 }
 
-/* Bulles */
-
+/* ===== BULLES ===== */
 .bubbles span {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   background: rgba(255,79,216,0.4);
   border-radius: 50%;
   animation: float 10s infinite;
 }
 
 .bubbles span:nth-child(1){top:20%;left:10%}
-.bubbles span:nth-child(2){top:70%;left:30%}
-.bubbles span:nth-child(3){top:40%;left:80%}
+.bubbles span:nth-child(2){top:70%;left:25%}
+.bubbles span:nth-child(3){top:45%;left:85%}
 .bubbles span:nth-child(4){top:85%;left:60%}
 
 @keyframes float {
   0% {transform: translateY(0);}
-  50% {transform: translateY(-30px);}
+  50% {transform: translateY(-25px);}
   100% {transform: translateY(0);}
 }
 
-@media (max-width: 768px) {
-  .stats {
-    flex-direction: column;
+/* ===== PC / TABLETTE ===== */
+@media (min-width: 768px) {
+
+  nav {
+    width: auto;
+    margin-top: 0;
   }
+
+  .hero {
+    text-align: left;
+    padding: 160px 10%;
+  }
+
   .hero h1 {
-    font-size: 40px;
+    font-size: 60px;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .stats {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .section {
+    padding: 120px 10%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
