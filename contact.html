@@ -1,75 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact - Tarek Rajab</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Icônes -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ✅ NAVBAR À GAUCHE -->
-    <aside class="sidebar">
-        <div class="logo">TR</div>
+<div class="sidebar">
+  <div class="logo">TR</div>
+  <a href="index.html">🏠</a>
+  <a href="apropos.html">👤</a>
+  <a href="projects.html">📁</a>
+  <a href="experience.html">💼</a>
+  <a href="competences.html">⚡</a>
+  <a href="certifications.html">📜</a>
+  <a href="entreprise.html">🏢</a>
+  <a href="contact.html">✉️</a>
+</div>
 
-        <nav>
-            <a href="index.html" title="Accueil"><i class="fa-solid fa-house"></i></a>
-            <a href="apropos.html" title="À propos"><i class="fa-solid fa-user"></i></a>
-            <a href="competences.html" title="Compétences"><i class="fa-solid fa-code"></i></a>
-            <a href="projects.html" title="Projets"><i class="fa-solid fa-folder-open"></i></a>
-            <a href="experience.html" title="Expériences"><i class="fa-solid fa-briefcase"></i></a>
-            <a href="entreprise.html" title="Entreprise"><i class="fa-solid fa-building"></i></a>
-            <a href="certifications.html" title="Certifications"><i class="fa-solid fa-certificate"></i></a>
-            <a href="contact.html" title="Contact"><i class="fa-solid fa-envelope"></i></a>
-        </nav>
-    </aside>
+<div class="main">
+  <div class="contact-box">
+    <h1>Me contacter</h1>
+    <p>Email : <strong>tarekrajabpro@gmail.com</strong></p>
 
-    <!-- ✅ CONTENU PRINCIPAL -->
-    <main class="main-content">
+    <form>
+      <input type="text" placeholder="Ton nom">
+      <input type="email" placeholder="Ton email">
+      <textarea placeholder="Ton message"></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
 
-        <section class="home">
-            <h1>Contact</h1>
-            <h2>Tu peux me contacter ici</h2>
-
-            <p>
-                Si tu souhaites me contacter pour un stage, une alternance,
-                un projet ou simplement pour échanger, tu peux utiliser le formulaire
-                ci-dessous ou m’écrire directement par email.
-            </p>
-
-            <!-- ✅ FORMULAIRE -->
-            <form class="contact-form">
-                <input type="text" placeholder="Nom" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Ton message..." required></textarea>
-                <button type="submit" class="btn primary">Envoyer</button>
-            </form>
-
-            <!-- ✅ EMAIL -->
-            <p style="margin-top: 25px;">
-                📧 Email : <strong>tarekrajabpro@gmail.com</strong>
-            </p>
-
-            <!-- ✅ BOUTON CV -->
-            <div class="buttons" style="margin-top: 30px;">
-                <a href="cv-tarek-rajab.pdf" class="btn secondary" download>
-                    Télécharger mon CV
-                </a>
-            </div>
-
-        </section>
-
-        <!-- ✅ VAGUES -->
-        <div class="waves">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-    </main>
+    <a class="cv-btn" href="cv-tarek-rajab.pdf" download>Télécharger mon CV</a>
+  </div>
+</div>
 
 </body>
 </html>
