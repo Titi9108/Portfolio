@@ -296,4 +296,64 @@ body {
     padding: 40px 20px;
   }
 }
+/* ===== FIX DÉCALAGE CONTENU + SIDEBAR ===== */
+
+:root {
+  --sidebar-width: 90px;
+}
+
+/* Sidebar bien fixe */
+.sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Contenu bien aligné à côté de la sidebar */
+.main,
+.page-content {
+  margin-left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+  max-width: calc(100% - var(--sidebar-width));
+  padding: 80px 60px;
+  box-sizing: border-box;
+}
+
+/* Empêche le gros vide à droite */
+body {
+  overflow-x: hidden;
+}
+
+/* Texte qui s'adapte bien */
+.page-content p,
+.page-content h1,
+.page-content h2,
+.page-content h3 {
+  max-width: 1000px;
+}
+
+/* Boutons bien visibles */
+button,
+.btn {
+  white-space: nowrap;
+}
+
+/* ===== FIX MOBILE ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 65px;
+  }
+
+  .main,
+  .page-content {
+    margin-left: 65px;
+    width: calc(100% - 65px);
+    padding: 40px 20px;
+  }
+}
+
 
