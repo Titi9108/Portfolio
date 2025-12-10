@@ -250,3 +250,50 @@ button:hover {
     flex-direction: column;
   }
 }
+/* ================= FIX SIDEBAR + SCROLL ================= */
+
+/* Autoriser le scroll global */
+body {
+  overflow-y: auto !important;
+}
+
+/* Sidebar toujours visible et bien centrée */
+.sidebar {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Réalignement des icônes */
+.sidebar a {
+  margin: 14px 0;
+}
+
+/* Forcer le contenu à ne PAS passer sous la sidebar */
+.main {
+  margin-left: 110px;
+  padding: 80px 60px;
+}
+
+/* Empêcher le contenu d'être collé en haut */
+.main > * {
+  max-width: 100%;
+}
+
+/* Fix spécialement pour les pages longues */
+.page-content {
+  min-height: 120vh;
+  padding-bottom: 100px;
+}
+
+/* Fix mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 65px;
+  }
+
+  .main {
+    margin-left: 80px;
+    padding: 40px 20px;
+  }
+}
+
