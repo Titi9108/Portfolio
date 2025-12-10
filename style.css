@@ -2,127 +2,64 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background: radial-gradient(circle at 20% 20%, #fff1b6, transparent 40%),
-              radial-gradient(circle at 80% 70%, #d6c6ff, transparent 40%),
-              radial-gradient(circle at 30% 80%, #ffc1e3, transparent 40%),
-              #f8f9ff;
+  display: flex;
+  background: linear-gradient(120deg, #fff5c3, #fdd6e8, #dcd8ff);
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
-/* ===== NAVBAR FIXE À GAUCHE ===== */
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 90px;
-  height: 100vh;
-  background: linear-gradient(180deg, #ff5fcf, #7b6cff);
+nav {
+  width: 80px;
+  background: linear-gradient(to bottom, #ff69b4, #8a6cff);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 15px;
-  gap: 25px;
-  z-index: 1000;
+  padding: 20px 0;
+  position: fixed;
+  height: 100vh;
 }
 
-.sidebar .logo {
-  color: white;
-  font-weight: bold;
+nav a {
+  margin: 15px 0;
   font-size: 22px;
-  margin-bottom: 25px;
-}
-
-.sidebar a {
-  color: white;
-  font-size: 24px;
   text-decoration: none;
-  transition: transform 0.2s;
+  color: white;
 }
 
-.sidebar a:hover {
-  transform: scale(1.2);
-}
-
-/* ===== CONTENU PRINCIPAL ===== */
-.main-content {
-  margin-left: 90px;
-  padding: 80px 80px 80px 80px;
-  min-height: 100vh;
+main {
+  margin-left: 100px;
+  padding: 50px;
+  width: 100%;
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 48px;
   margin-bottom: 10px;
-  color: #222;
 }
 
-.subtitle {
-  color: #6b6bff;
-  font-weight: 600;
-  margin-bottom: 25px;
-  font-size: 22px;
+h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-p {
-  font-size: 18px;
-  color: #333;
-  line-height: 1.7;
-  max-width: 900px;
-}
-
-/* ===== BOUTONS ===== */
-.btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 30px;
-  border-radius: 40px;
-  background: linear-gradient(90deg, #ff5fcf, #7b6cff);
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.2s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* ===== CARTES ===== */
 .card {
   background: white;
+  padding: 25px;
   border-radius: 20px;
-  padding: 30px;
-  margin-top: 30px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   max-width: 900px;
 }
 
-/* ===== FORMULAIRE CONTACT ===== */
-form {
-  max-width: 700px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 14px;
-  margin-top: 15px;
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-button {
-  margin-top: 20px;
-  padding: 14px 30px;
-  border-radius: 40px;
-  border: none;
-  background: linear-gradient(90deg, #ff5fcf, #7b6cff);
+.btn {
+  background: linear-gradient(90deg, #ff69b4, #7b6cff);
   color: white;
-  font-weight: bold;
-  cursor: pointer;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 20px;
 }
