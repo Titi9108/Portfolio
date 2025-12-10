@@ -1,359 +1,196 @@
-/* ------------------ BASE ------------------ */
+/* ===== RESET TOTAL ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: linear-gradient(120deg, #ffffff, #f7faff);
+  background: #f7f9ff;
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ------------------ SIDEBAR ------------------ */
+/* ===== SIDEBAR ===== */
 .sidebar {
   position: fixed;
-  left: 0;
   top: 0;
-  width: 80px;
+  left: 0;
+  width: 85px;
   height: 100vh;
-  background: linear-gradient(180deg, #ff63c3, #8b6cff);
+  background: linear-gradient(180deg, #ff6fd8, #7b6cff);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
-  z-index: 1000;
+  gap: 28px;
+  z-index: 9999;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: 800;
+.sidebar .logo {
+  font-weight: bold;
+  font-size: 22px;
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .sidebar a {
-  margin: 18px 0;
-  font-size: 22px;
   color: white;
-  transition: 0.3s;
+  font-size: 22px;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
 .sidebar a:hover {
-  transform: scale(1.25);
-  color: #ffe600;
+  transform: scale(1.2);
 }
 
-/* ------------------ MAIN ------------------ */
+/* ===== CONTENU PRINCIPAL ===== */
 .main {
-  margin-left: 110px;
-  padding: 80px;
+  margin-left: 85px;
   min-height: 100vh;
-  animation: fade 0.8s ease;
+  padding: 60px;
+  position: relative;
 }
 
-@keyframes fade {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
+/* ===== TITRES ===== */
 h1 {
   font-size: 52px;
   font-weight: 800;
-  color: #222;
+  margin-bottom: 10px;
 }
 
 h2 {
-  margin-top: 15px;
-  font-size: 22px;
-  color: #6b63ff;
+  font-size: 26px;
+  color: #7b6cff;
+  margin-bottom: 20px;
 }
 
 p {
-  margin-top: 20px;
-  font-size: 17px;
-  color: #444;
-  max-width: 700px;
+  max-width: 900px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
 }
 
-/* ------------------ BOUTONS ------------------ */
-.home-buttons {
-  margin-top: 40px;
-  display: flex;
-  gap: 20px;
-}
-
+/* ===== BOUTONS ===== */
 .btn {
-  padding: 14px 28px;
-  background: linear-gradient(135deg, #ff63c3, #8b6cff);
+  display: inline-block;
+  padding: 14px 30px;
+  margin-top: 25px;
   border-radius: 40px;
+  background: linear-gradient(90deg, #ff6fd8, #7b6cff);
   color: white;
   font-weight: 600;
-  transition: 0.3s;
+  text-decoration: none;
+  transition: 0.25s;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transform: scale(1.05);
 }
 
-.btn-outline {
-  padding: 14px 28px;
-  border-radius: 40px;
-  border: 2px solid #8b6cff;
-  color: #8b6cff;
-  font-weight: 600;
-  transition: 0.3s;
+/* ===== VAGUES ANIMÉES ===== */
+.wave {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.35;
+  animation: float 10s infinite alternate;
 }
 
-.btn-outline:hover {
-  background: #8b6cff;
-  color: white;
-}
-
-/* ------------------ CERTIFICATIONS ------------------ */
-.certif-grid {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-}
-
-.certif-card {
-  background: white;
-  padding: 25px;
-  text-align: center;
-  border-radius: 16px;
-  font-weight: 600;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.certif-card:hover {
-  transform: translateY(-6px) scale(1.05);
-  background: linear-gradient(135deg, #ff63c3, #8b6cff);
-  color: white;
-}
-
-/* ------------------ ENTREPRISE ------------------ */
-.bubble-grid {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 35px;
-}
-
-.bubble {
-  background: linear-gradient(135deg, #ff63c3, #8b6cff);
-  padding: 35px;
-  border-radius: 100px;
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-  animation: float 4s ease-in-out infinite;
-}
-
-.bubble:nth-child(2) { animation-delay: 1s; }
-.bubble:nth-child(3) { animation-delay: 2s; }
-.bubble:nth-child(4) { animation-delay: 3s; }
+.wave1 { background: #ffb703; top: 10%; left: 20%; }
+.wave2 { background: #7b6cff; bottom: 15%; right: 20%; }
+.wave3 { background: #ff6fd8; top: 50%; right: 40%; }
 
 @keyframes float {
-  0% {transform: translateY(0);}
-  50% {transform: translateY(-15px);}
-  100% {transform: translateY(0);}
+  from { transform: translateY(0); }
+  to { transform: translateY(-60px); }
 }
 
-/* ------------------ CONTACT ------------------ */
-.contact-box {
-  max-width: 600px;
-  background: white;
-  padding: 50px;
-  border-radius: 25px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-}
-
-.contact-box h1 {
-  font-size: 36px;
-}
-
-form {
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
+/* ===== FORMULAIRES ===== */
 input, textarea {
-  padding: 12px 16px;
+  width: 100%;
+  max-width: 500px;
+  padding: 14px;
+  margin-top: 10px;
+  margin-bottom: 15px;
   border-radius: 10px;
   border: 1px solid #ccc;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 textarea {
-  resize: none;
-  height: 120px;
+  min-height: 140px;
 }
 
-button {
-  margin-top: 10px;
-  padding: 14px;
-  border-radius: 30px;
-  border: none;
-  background: linear-gradient(135deg, #ff63c3, #8b6cff);
-  color: white;
+/* ===== BULLES ENTREPRISE ===== */
+.stats {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: white;
+  padding: 25px;
+  border-radius: 25px;
+  min-width: 220px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.stat h3 {
+  font-size: 28px;
+  color: #7b6cff;
+}
+
+.stat p {
+  margin-top: 5px;
   font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-}
-button:hover {
-  opacity: 0.85;
 }
 
-/* ------------------ BOUTON CV ------------------ */
-.cv-btn {
-  margin-top: 25px;
-  display: inline-block;
-  padding: 14px 26px;
-  border-radius: 30px;
-  border: 2px solid #8b6cff;
-  color: #8b6cff;
-  font-weight: 600;
-}
-.cv-btn:hover {
-  background: #8b6cff;
-  color: white;
+/* ===== CERTIFICATIONS ===== */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
 }
 
-/* ------------------ MOBILE ------------------ */
+.cert {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.cert:hover {
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
 @media (max-width: 768px) {
   .sidebar {
-    width: 60px;
+    width: 65px;
   }
+
   .main {
-    margin-left: 80px;
-    padding: 40px 25px;
+    margin-left: 65px;
+    padding: 30px;
   }
 
   h1 {
     font-size: 36px;
   }
 
-  .home-buttons {
-    flex-direction: column;
+  p {
+    font-size: 16px;
   }
 }
-/* ================= FIX SIDEBAR + SCROLL ================= */
-
-/* Autoriser le scroll global */
-body {
-  overflow-y: auto !important;
-}
-
-/* Sidebar toujours visible et bien centrée */
-.sidebar {
-  height: 100vh;
-  overflow-y: auto;
-}
-
-/* Réalignement des icônes */
-.sidebar a {
-  margin: 14px 0;
-}
-
-/* Forcer le contenu à ne PAS passer sous la sidebar */
-.main {
-  margin-left: 110px;
-  padding: 80px 60px;
-}
-
-/* Empêcher le contenu d'être collé en haut */
-.main > * {
-  max-width: 100%;
-}
-
-/* Fix spécialement pour les pages longues */
-.page-content {
-  min-height: 120vh;
-  padding-bottom: 100px;
-}
-
-/* Fix mobile */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 65px;
-  }
-
-  .main {
-    margin-left: 80px;
-    padding: 40px 20px;
-  }
-}
-/* ===== FIX DÉCALAGE CONTENU + SIDEBAR ===== */
-
-:root {
-  --sidebar-width: 90px;
-}
-
-/* Sidebar bien fixe */
-.sidebar {
-  width: var(--sidebar-width);
-  min-width: var(--sidebar-width);
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-/* Contenu bien aligné à côté de la sidebar */
-.main,
-.page-content {
-  margin-left: var(--sidebar-width);
-  width: calc(100% - var(--sidebar-width));
-  max-width: calc(100% - var(--sidebar-width));
-  padding: 80px 60px;
-  box-sizing: border-box;
-}
-
-/* Empêche le gros vide à droite */
-body {
-  overflow-x: hidden;
-}
-
-/* Texte qui s'adapte bien */
-.page-content p,
-.page-content h1,
-.page-content h2,
-.page-content h3 {
-  max-width: 1000px;
-}
-
-/* Boutons bien visibles */
-button,
-.btn {
-  white-space: nowrap;
-}
-
-/* ===== FIX MOBILE ===== */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 65px;
-  }
-
-  .main,
-  .page-content {
-    margin-left: 65px;
-    width: calc(100% - 65px);
-    padding: 40px 20px;
-  }
-}
-
-
